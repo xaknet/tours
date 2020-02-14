@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from flask import Flask, render_template
 from flask_debugtoolbar import DebugToolbarExtension
+import data
 from flask import request
 
 app = Flask(__name__)
