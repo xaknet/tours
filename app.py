@@ -13,12 +13,19 @@ app.config['SECRET_KEY'] = 'YTOIHWEFHGSI'
 
 @app.route('/')
 def main():
-    return render_template('index.html')
+    return render_template('index.html',
+                           title=data.title,
+                           description=data.description,
+                           subtitle=data.subtitle,
+                           departures=data.departures)
 
 
 @app.route('/departure/<departure>')
 def departure(departure):
-    return render_template("departure.html")
+    return render_template("departure.html",
+                           departures=data.departures,
+                           title=data.title,
+                           departure=departure)
 
 
 @app.route('/tour/<id>')
