@@ -7,6 +7,7 @@ from flask import request
 
 app = Flask(__name__)
 
+
 app.debug = True
 
 app.config['SECRET_KEY'] = 'YTOIHWEFHGSI'
@@ -86,5 +87,6 @@ def server_error(e):
     return "Что то не так, но мы все починим"
 
 
-app.run()
+if __name__ == '__main__':
+    app.run()
 toolbar = DebugToolbarExtension
